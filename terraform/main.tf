@@ -18,6 +18,7 @@ resource "aws_cloudwatch_event_rule" "asg_up_scale_rule" {
   tags = {
     cluster = var.cluster_name
   }
+  description = "This rule is used to notify an asg scale up."
 }
 
 resource "aws_cloudwatch_event_rule" "asg_down_scale_rule" {
@@ -28,6 +29,7 @@ resource "aws_cloudwatch_event_rule" "asg_down_scale_rule" {
   tags = {
     cluster = var.cluster_name
   }
+  description = "This rule is used to notify an asg scale down."
 }
 
 resource "aws_cloudwatch_event_target" "asg_up_scale_target" {

@@ -5,14 +5,14 @@ variable "cluster_name" {
 
 variable "scale_up_schedule" {
   type        = string
-  description = "Set the up scaling schedule."
-  default     = "cron(0 8 ? * MON-FRI *)"
+  description = "Set the up scaling schedule. (expressed in UTC)"
+  default     = "cron(0 6 ? * MON-FRI *)"
 }
 
 variable "scale_down_schedule" {
   type        = string
-  description = "Set the down scaling schedule."
-  default     = "cron(0 17 ? * MON-FRI *)"
+  description = "Set the down scaling schedule. (expressed in UTC)"
+  default     = "cron(0 15 ? * MON-FRI *)"
 }
 
 variable "scale_up_max_size" {
