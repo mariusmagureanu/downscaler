@@ -1,4 +1,4 @@
-K8s cluster downscaler
+k8s cluster downscaler
 ----------------------
 
 This project is a poor man's attempt to reduce cost with running clusters. The idea behind it is to automatically scale up/down the number of worker nodes.
@@ -16,7 +16,7 @@ Run the following in the repository's root directory:
 $ make
 ```
 
-This will build the source code under ``src/`` and create a ``source.zip`` file.
+This will build the lambda source code under ``src/`` and create a ``source.zip`` file.
 
 ## Deploy the downscaler
 
