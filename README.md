@@ -60,7 +60,7 @@ Make sure you have the correct AWS credentials in place, fill in the variables a
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Name of the cluster used for detecting the attached autoscaling-groups. | `string` | n/a | yes |
-| <a name="input_lambda_file"></a> [lambda\_file](#input\_lambda\_file) | n/a | `string` | n/a | yes |
+| <a name="input_lambda_file"></a> [lambda\_file](#input\_lambda\_file) | Path to the zip file containing the lambda function. (see scaler.zip) | `string` | n/a | yes |
 | <a name="input_scale_down_max_size"></a> [scale\_down\_max\_size](#input\_scale\_down\_max\_size) | Max capacity after a scale down. | `number` | `1` | no |
 | <a name="input_scale_down_schedule"></a> [scale\_down\_schedule](#input\_scale\_down\_schedule) | Set the down scaling schedule. (expressed in UTC) | `string` | `"cron(0 15 ? * MON-FRI *)"` | no |
 | <a name="input_scale_in_protection"></a> [scale\_in\_protection](#input\_scale\_in\_protection) | Enable scale-in protection for new nodes after scale up. | `bool` | `false` | no |
