@@ -5,25 +5,25 @@ variable "cluster_name" {
 
 variable "scale_up_schedule" {
   type        = string
-  description = "Set the up scaling schedule. (expressed in UTC)"
+  description = "Set the up-scaling schedule. (expressed in UTC)"
   default     = "cron(0 6 ? * MON-FRI *)"
 }
 
 variable "scale_down_schedule" {
   type        = string
-  description = "Set the down scaling schedule. (expressed in UTC)"
+  description = "Set the down-scaling schedule. (expressed in UTC)"
   default     = "cron(0 15 ? * MON-FRI *)"
 }
 
 variable "scale_up_max_size" {
   type        = number
-  description = "Max capacity after a scale up."
+  description = "Max capacity after a scale-up."
   default     = 10
 }
 
 variable "scale_down_max_size" {
   type        = number
-  description = "Max capacity after a scale down."
+  description = "Max capacity after a scale-down."
   default     = 1
 
 }
@@ -37,5 +37,5 @@ variable "scale_in_protection" {
 
 variable "lambda_file" {
   type        = string
-  description = ""
+  description = "Path to the zip file containing the lambda function. (see scaler.zip)"
 }
