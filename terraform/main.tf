@@ -125,7 +125,7 @@ resource "aws_iam_role_policy_attachment" "cloud_watch_policy_attachment" {
 }
 
 resource "aws_iam_policy" "autoscaling_lifecycle_policy" {
-  name        = "AsgScaler-${var.cluster_name}"
+  name        = "ASG-Scaler-${var.cluster_name}"
   path        = "/"
   description = "This policy allows inspecting autoscaling groups"
 
@@ -137,7 +137,7 @@ resource "aws_iam_policy" "autoscaling_lifecycle_policy" {
           "autoscaling:UpdateAutoScalingGroup",
         ]
         Effect   = "Allow"
-        Resource = "*"
+        Resource = data.aws_autoscaling_groups.current_groups.arns
       }
     ]
   })
