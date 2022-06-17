@@ -19,3 +19,7 @@ $ make
 This will build the source code under ``src/`` and create a ``source.zip`` file.
 
 ## Deploy the downscaler
+
+The terraform code associated with the entire infra is found in the ``terraform`` directory.
+
+Make sure you have the correct AWS credentials in place, fill in the variables as needed and proceed to ``apply``.
